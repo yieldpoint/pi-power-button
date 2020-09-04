@@ -1,23 +1,24 @@
-# pi-power-button
+# pi-power-reset-buttons
 
-Scripts used in our official [Raspberry Pi power button guide](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi).
+Build on scripts from pi-power-button
 
-## Installation
+See their official [Raspberry Pi power button guide](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi).
 
-1. [Connect to your Raspberry Pi via SSH](https://howchoo.com/g/mgi3mdnlnjq/how-to-log-in-to-a-raspberry-pi-via-ssh)
-1. Clone this repo: `git clone https://github.com/Howchoo/pi-power-button.git`
+## Installation (for this repo)
+
+1. Connect to your Raspberry Pi via SSH
+1. Clone this repo: `git clone https://github.com/yieldpoint/pi-power-button.git`
 1. Run the setup script: `./pi-power-button/script/install`
 
 ## Uninstallation
 
-If you need to uninstall the power button script in order to use GPIO3 for another project or something:
+If you need to uninstall the power button script in order to use GPIO2/3 for another project or something:
 
 1. Run the uninstall script: `./pi-power-button/script/uninstall`
 
 ## Hardware
 
-A full list of what you'll need can be found [here](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi#parts-list). At a minimum, you'll need a normally-open (NO) power button, some jumper wires, and a soldering iron. If you _don't_ have a soldering iron or don't feel like breaking it out, you can use [this prebuilt button](https://howchoo.com/shop/product/prebuilt-raspberry-pi-power-button) instead.
+You'll need two normally-open (NO) power buttons. 
 
-Connect the power button to Pin 5 (SCL) and Pi 6 (GND) as shown in this diagram:
-
-![Connection Diagram](https://raw.githubusercontent.com/Howchoo/pi-power-button/master/diagrams/pinout.png)
+To test, connect a jumper to ground, and touch pin 3 for restart, 5 for shutdown.
+Final will have pin 3 and 5 connected to button passthroughs on the cape
