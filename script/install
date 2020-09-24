@@ -13,20 +13,7 @@ sudo cp listen-for-shutdown.sh /etc/init.d/
 sudo chmod +x /etc/init.d/listen-for-shutdown.sh
 
 sudo update-rc.d listen-for-shutdown.sh defaults
-sudo /etc/init.d/listen-for-shutdown.sh start
+#sudo /etc/init.d/listen-for-shutdown.sh start
 
 echo "Shutdown listener installed.\n"
-
-echo "=> Installing restart listener...\n"
-sudo cp listen-for-restart.py /usr/local/bin/
-sudo chmod +x /usr/local/bin/listen-for-restart.py
-
-echo "=> Starting restart listener...\n"
-sudo cp listen-for-restart.sh /etc/init.d/
-sudo chmod +x /etc/init.d/listen-for-restart.sh
-
-sudo update-rc.d listen-for-restart.sh defaults
-sudo /etc/init.d/listen-for-restart.sh start
-
-echo "Restart listener installed.\n"
-echo "Developed by howchoo.com, expanded by Peter Brittain (KindarConrath)"
+echo "Developed by howchoo.com"
